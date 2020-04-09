@@ -116,6 +116,17 @@ def printBoard(board):
 		print()
 	print()
 
+def printFinalBoard(board):
+	print(len(board), " by ", len(board), ": ")
+	for i in range(len(board)):
+		for j in range(len(board[0])):
+			if board[i][j] != 'Q':
+				print('-', end=' ')
+			else:
+				print('Q', end=' ')
+		print()
+	print()
+
 def main():
 	#grab number of queens
 	n = int(sys.argv[1])
@@ -133,7 +144,7 @@ def main():
 
 	#print the correct answer :)
 	print("Final:")
-	printBoard(board)
+	printFinalBoard(board)
 
 if __name__ == '__main__':
 	main()
